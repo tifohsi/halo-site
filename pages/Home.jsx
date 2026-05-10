@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { FaBook, FaHome, FaLock, FaMicroblog, FaStar, FaTwitter } from 'react-icons/fa'
 import { PiButterflyFill } from 'react-icons/pi'
 import { FaSpotify, FaXTwitter } from "react-icons/fa6";
+import Header from '../components/Header.jsx'
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -23,30 +25,9 @@ export default function Home() {
 
   return (
     <>
-
-    <body className="max-w-[40rem] mx-auto align-center"> 
-      <header className="px-8 py-8 flex items-center justify-between ">
-        <FaStar className="w-4 h-4 text-black" />
-        <div className="ml-2 text-black text-sm">
-          <ul className="flex space-x-6">
-            <li className="hover:cursor-pointer transition hover:scale-105">
-              <FaHome className="w-4 h-4 inline-block mr-2" />
-              Home
-            </li>
-            <li className='hover:cursor-pointer transition hover:scale-105'>
-              <FaBook className="w-4 h-4 inline-block mr-2" />
-              Backstory
-            </li>
-            <li className="hover:cursor-pointer transition hover:scale-105 text-bold">
-              <PiButterflyFill className="w-4 h-4 inline-block mr-2" />
-              문.
-            </li>
-          </ul>
-        </div>
-      </header>
-
+    <div className="max-w-[40rem] mx-auto align-center"> 
+      <Header />  
       <main className="px-8 space-y-6">
-
         <div className=" heading">
           <div className="relative rounded-xl overflow-hidden border border-black h-[20rem]">
             {headingImages.map((src, index) => (
@@ -59,10 +40,10 @@ export default function Home() {
             <div className="overlay"> 
               <div className="absolute bottom-8 px-8">
                 <h1 className="text-xl font-bold text-white">
-                  Javier Eloise Maximme Consunji
+                  Halo Maximme Consunji
                 </h1>
                 <p className="text-xs text-white">
-                  Get to know Halo by navigating though the navigation bar or scrolling down!
+                  Get to know Halo by navigating by exploring the site!
                 </p>
               </div>
             </div>
@@ -75,20 +56,21 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between characters">
-          <div className="character-1 aspect-[3/4] border border-black rounded-xl w-[48%]">
+          <Link to="/Halo" className="character-1 aspect-[3/4] border border-black rounded-xl w-[48%]">
             <img src="/assets/halo-1.jpg" className="char-main" />
             <img src="/assets/halo-2.jpg" className="char-hover" />
             <div className="char-name">
-              <p className="text-white font-bold absolute bottom-5 px-5">Halo</p>
+                <p className="text-white font-bold absolute bottom-5 px-5">Halo</p>
             </div>
-          </div>
-          <div className="character-2 aspect-[3/4] border border-black rounded-xl w-[48%]">
+          </Link>
+
+          <Link to="/Eli" className="character-2 aspect-[3/4] border border-black rounded-xl w-[48%]">
             <img src="/assets/eli-1.jpg" className="char-main" />
             <img src="/assets/eli-2.jpg" className="char-hover" />
             <div className="char-name">
               <p className="text-white font-bold absolute bottom-5 px-5">Eli</p>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="pt-4 flex justify-between items-center links">
@@ -116,7 +98,7 @@ export default function Home() {
         </div>
         
       </main>
-    </body>
+    </div>
     
     <footer>
         <div className="px-8 py-8 text-center text-xs text-gray-500 ">
