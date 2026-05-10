@@ -11,8 +11,37 @@
 }
 
 .heading-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: 50% 30%;
-  display: block;
+
+  transition: opacity 1.5s ease-in-out;
+}
+
+.heading-bg.inactive {
+  opacity: 0;
+}
+
+.heading-bg.active {
+  opacity: 1;
+}
+
+.heading-bg[src*="eli-bg.jpg"] {
+  object-position: 50% 40%;
+  transform: scale(1.25);
+}
+
+@keyframes imageFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .overlay {
@@ -83,4 +112,25 @@ position: absolute;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
+}
+
+.overlay-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0) 50%, 
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.blog-1-img {
+  display: block;
+  z-index: 1;
 }
