@@ -10,6 +10,77 @@
   font-family: 'Stack Sans Text', sans-serif;
 }
 
-.halo-bg {
+.heading-bg {
   object-position: 50% 30%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0)  0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
+  pointer-events: none;
+}
+
+.character-1, .character-2 {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.character-1 img, .character-2 img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.char-main {
+    opacity: 1;
+    position: relative;
+}
+
+.char-hover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.character-1:hover .char-main, .character-2:hover .char-main {
+    transform: scale(1.05);
+    opacity: 0;
+}
+
+.character-1:hover .char-hover, .character-2:hover .char-hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.character-1:hover .char-name, .character-2:hover .char-name {
+  opacity: 1;
+}
+
+.char-name {
+position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    display: flex;
+    align-items: flex-end;
+    
+    z-index: 10;
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
