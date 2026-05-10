@@ -40,7 +40,7 @@ export default function Home() {
             <div className="overlay"> 
               <div className="absolute bottom-8 px-8">
                 <h1 className="text-xl font-bold text-white">
-                  Halo Maximme Consunji
+                  Javier Eloise Maximme Consunji
                 </h1>
                 <p className="text-xs text-white">
                   Get to know Halo by navigating by exploring the site!
