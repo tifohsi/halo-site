@@ -3,8 +3,8 @@ import Footer from '../components/Footer.jsx';
 
 export default function Backstory() {
     return (
-    <>
-        <div className="max-w-[40rem] mx-auto align-center">
+    <div className="flex flex-col min-h-screen"> 
+        <div className="max-w-[40rem] mx-auto w-full flex-grow">
             <Header />
 
             <main className="px-8 space-y-4">
@@ -52,7 +52,7 @@ export default function Backstory() {
                 
             </main>
         </div>
-    <Footer />
-    </>
+        <Footer />
+    </div>
     )
-}    
+}
