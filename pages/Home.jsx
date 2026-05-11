@@ -3,7 +3,9 @@ import { FaBook, FaHome, FaLock, FaMicroblog, FaStar, FaTwitter } from 'react-ic
 import { PiButterflyFill } from 'react-icons/pi'
 import { FaSpotify, FaXTwitter } from "react-icons/fa6";
 import Header from '../components/Header.jsx'
+import Footer from '../components/Footer.jsx';
 import { Link } from 'react-router-dom';
+
 
 
 export default function Home() {
@@ -27,9 +29,9 @@ export default function Home() {
     <>
     <div className="max-w-[40rem] mx-auto align-center"> 
       <Header />  
-      <main className="px-8 space-y-6">
+      <main className="px-8 space-y-4">
         <div className=" heading">
-          <div className="relative rounded-xl overflow-hidden border border-black h-[20rem]">
+          <div className="relative rounded-xl overflow-hidden border border-black h-[16rem] sm:h-[20rem]">
             {headingImages.map((src, index) => (
                   <img 
                     key={src}
@@ -38,11 +40,11 @@ export default function Home() {
                   />
                 ))}
             <div className="overlay"> 
-              <div className="absolute bottom-8 px-8">
-                <h1 className="text-xl font-bold text-white">
-                  Javier Eloise Maximme Consunji
+              <div className="absolute bottom-5 px-5 sm:bottom-8 sm:px-8 ">
+                <h1 className="text-md sm:text-xl font-bold text-white">
+                  Meet Halo <i>!</i>
                 </h1>
-                <p className="text-xs text-white">
+                <p className="text-[9px] sm:text-sm text-white">
                   Get to know Halo by navigating by exploring the site!
                 </p>
               </div>
@@ -50,9 +52,20 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="pt-4 flex justify-between items-center about">
+          <p className="text-sm sm:text-lg font-bold">Basic Information</p>
+          <p className="text-[10px] sm:text-xs text-gray-500"> Basic details about Halo.</p>
+        </div>
+
+        <div className="border border-black rounded-xl p-3  bg-gray-200 flex justify-center about-box">
+          <p className="text-[10px] sm:text-sm justify text-justify">
+           <b>Harvey Ellois Knoa Consunji</b> — Any Pronouns, Of age, Haechan and Giselle FC.
+          </p>
+        </div>
+
         <div className="pt-4 flex justify-between items-center characters">
-            <p className="text-md font-bold">Characters</p>
-            <p className='text-xs text-gray-500'> Click image to view character details.</p>
+            <p className="text-sm sm:text-lg font-bold">Characters</p>
+            <p className="text-[10px] sm:text-xs text-gray-500"> Click image to view character details.</p>
         </div>
 
         <div className="flex justify-between characters">
@@ -60,7 +73,7 @@ export default function Home() {
             <img src="/assets/halo-1.jpg" className="char-main" />
             <img src="/assets/halo-2.jpg" className="char-hover" />
             <div className="char-name">
-                <p className="text-white font-bold absolute bottom-5 px-5">Halo</p>
+                <p className="text-white text-sm md:text-lg font-bold absolute bottom-4 px-4 sm:bottom-5 sm:px-5">Halo</p>
             </div>
           </Link>
 
@@ -68,30 +81,30 @@ export default function Home() {
             <img src="/assets/eli-1.jpg" className="char-main" />
             <img src="/assets/eli-2.jpg" className="char-hover" />
             <div className="char-name">
-              <p className="text-white font-bold absolute bottom-5 px-5">Eli</p>
+                <p className="text-white text-sm md:text-lg font-bold absolute bottom-4 px-4 sm:bottom-5 sm:px-5">Eli</p>
             </div>
           </Link>
         </div>
 
         <div className="pt-4 flex justify-between items-center links">
-            <p className="text-md font-bold">Links</p>
+            <p className="text-sm sm:text-lg font-bold">Links</p>
             <ul className="flex justify-end space-x-4">
               <li className="text-xs text-gray-500 hover:cursor-pointer transition hover:scale-105">
-                <a href="https://x.com/tifohsi" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  <FaXTwitter className="w-3 h-3 inline-block mr-1" />
-                  Main
+                <a href="https://x.com/tifohsi" target="_blank" rel="noopener noreferrer" className="hover:scale-105 flex items-center">
+                  <FaXTwitter className="w-2 h-2 sm:w-3 sm:h-3 inline-block mr-1" />
+                  <p className="text-[10px] sm:text-xs">Main</p>
                 </a>
               </li>
               <li className="text-xs text-gray-500 hover:cursor-pointer transition hover:scale-105">
-                <a href="https://x.com/reoksta" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  <FaLock className="w-3 h-3 inline-block mr-1" />
-                  Side
+                <a href="https://x.com/reoksta" target="_blank" rel="noopener noreferrer" className="hover:scale-105 flex items-center">
+                  <FaLock className="w-2 h-2 sm:w-3 sm:h-3 inline-block mr-1" />
+                  <p className="text-[10px] sm:text-xs">Side</p>
                 </a>
               </li>
               <li className="text-xs text-gray-500 hover:cursor-pointer transition hover:scale-105">
-                <a href="https://open.spotify.com/user/31vn6cuvfhsun3n2qy7dbtpz4awe?si=8fce0bef8fdb457e" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  <FaSpotify className="w-3 h-3 inline-block mr-1" />
-                  Spotify
+                <a href="https://open.spotify.com/user/31vn6cuvfhsun3n2qy7dbtpz4awe?si=8fce0bef8fdb457e" target="_blank" rel="noopener noreferrer" className="hover:scale-105 flex items-center">
+                  <FaSpotify className="w-2 h-2 sm:w-3 sm:h-3 inline-block mr-1" />
+                  <p className="text-[10px] sm:text-xs">Spotify</p>
                 </a>
               </li>
             </ul>
@@ -100,11 +113,7 @@ export default function Home() {
       </main>
     </div>
     
-    <footer>
-        <div className="px-8 py-8 text-center text-xs text-gray-500 ">
-          &copy; Site by #BIA. For roleplaying purposes only.
-        </div>
-    </footer>
+    <Footer />
     </>
   )
 }
