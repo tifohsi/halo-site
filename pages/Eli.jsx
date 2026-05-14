@@ -35,7 +35,7 @@ export default function Eli() {
                                 <strong>Pronouns:</strong> She/Her/Any <br/>
                                 <strong>Sexual Orientation:</strong> Bisexual <br/>
                                 <br/>
-                                <strong>Occupation:</strong> IT Student, Freelance Graphic Designer & Web Developer <br/>
+                                <strong>Occupation:</strong> IT Student, Freelance Graphic Designer <br/>
                                 <br/>
                                 <strong>Faceclaim:</strong> aespa Giselle or <Link to="/Halo" className="text-blue-500 hover:underline "> NCT Haechan</Link><br/>
                                 <strong>Scent:</strong> Jo Malone Peony Blush and Suede <br/>
