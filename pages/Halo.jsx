@@ -37,7 +37,7 @@ export default function Halo() {
                                 <strong>Pronouns:</strong> He/Him/Any <br/>
                                 <strong>Sexual Orientation:</strong> Bisexual <br/>
                                 <br/>
-                                <strong>Occupation:</strong> IT Student, Freelance Graphic Designer & Web Developer <br/>
+                                <strong>Occupation:</strong> IT Student, Freelance Graphic Designer <br/>
                                 <br/>
                                 <strong>Faceclaim:</strong> NCT Haechan or <Link to="/Eli" className="text-blue-500 hover:underline "> aespa Giselle</Link><br/>
                                 <strong>Scent:</strong> Jo Malone Wood Sage & Sea Salt <br/>
